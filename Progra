@@ -1,0 +1,58 @@
+
+# Manual de Usuario
+
+## Objetivo
+Permitir al usuario escribir un texto y obtener el **sentimiento** (positivo, neutral o negativo) con una **confianza**.
+
+## Requisitos previos
+- Navegador web moderno.
+- La aplicación debe estar ejecutándose (local o desplegada).
+
+## Pasos de uso
+1. Abre la URL de la aplicación (por ejemplo `http://localhost:5000`).
+2. En el cuadro **Texto**, escribe la frase o párrafo a analizar.
+3. Presiona **Analizar** (o `Ctrl + Enter`).
+4. Observa el **Resultado**:
+   - Sentimiento estimado.
+   - Etiqueta original del modelo.
+   - Confianza del resultado.
+5. Si aparece un mensaje de error, verifica tu conexión y vuelve a intentar.
+
+## Ejemplos
+- "Me encanta este producto" → positivo.
+- "No me gustó el servicio" → negativo.
+- "El día está bien" → neutral.
+
+## Preguntas frecuentes (FAQ)
+- **¿Qué idiomas soporta?** El modelo por defecto es multilingüe y funciona bien con español/inglés.
+- **¿Hay límites?** Depende de la cuota gratuita de Hugging Face y del plan.
+- **¿Mis textos se guardan?** No, la app no persiste datos por defecto.
+
+# Manual de Usuario
+
+## Objetivo
+Permitir al usuario escribir un texto y obtener el **sentimiento** (positivo, neutral o negativo) con una **confianza**.
+
+## Requisitos previos
+- Navegador web moderno.
+- La aplicación debe estar ejecutándose (local o desplegada).
+
+## Pasos de uso
+1. Abre la URL de la aplicación (por ejemplo `http://localhost:5000`).
+2. En el cuadro **Texto**, escribe la frase o párrafo a analizar.
+3. Presiona **Analizar** (o `Ctrl + Enter`).
+4. Observa el **Resultado**:
+   - Sentimiento estimado.
+   - Etiqueta original del modelo.
+   - Confianza del resultado.
+5. Si aparece un mensaje de error, verifica tu conexión y vuelve a intentar.
+
+## Ejemplos
+- "Me encanta este producto" → positivo.
+- "No me gustó el servicio" → negativo.
+- "El día está bien" → neutral.
+
+## Preguntas frecuentes (FAQ)
+- **¿Qué idiomas soporta?** El modelo por defecto es multilingüe y funciona bien con español/inglés.
+- **¿Hay límites?** Depende de la cuota gratuita de Hugging Face y del plan.
+- **¿Mis textos se guardan?** No, la app no persiste datos por defecto.
