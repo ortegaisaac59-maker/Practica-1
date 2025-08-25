@@ -1,0 +1,38 @@
+# Manual del Programador
+
+## Arquitectura
+- **Frontend:** HTML + TailwindCDN.
+- **Backend:** Flask.
+- **IA como servicio:** Hugging Face Inference API.
+- **Rutas:**
+  - `GET /` → página principal.
+  - `POST /api/sentiment` → recibe `{ "text": "..." }` y retorna JSON con `sentiment`, `label`, `confidence`.
+
+## Variables de entorno
+- `HUGGINGFACE_API_KEY`: token de acceso a Hugging Face.
+- `HF_MODEL`: nombre del modelo (default: `nlptown/bert-base-multilingual-uncased-sentiment`).
+- `PORT`, `FLASK_DEBUG`.
+
+## Flujo
+1. El usuario envía texto desde el frontend.
+2. Flask recibe el JSON y valida.
+3. Se hace `POST` a la API de Hugging Face con el token.
+4. Se normaliza la respuesta para extraer la mejor etiqueta y su `score`.
+5. Se deriva una categoría (`positive`, `neutral`, `negative`) y se retorna al frontend.
+
+## Manejo de errores
+- Validación de texto vacío → `400`.
+- Falta de API key → `500`.
+- Timeout/errores externos → `502/504`.
+- Excepciones inesperadas → `500`.
+
+## Pruebas rápidas (curl)
+```bash
+curl -X POST http://localhost:5000/api/sentiment       -H "Content-Type: application/json"       -d '{"text":"me encanta programar"}'
+```
+
+## Extensiones posibles
+- Guardar historial en SQLite.
+- Autenticación de usuario.
+- Cambiar de modelo de IA desde la interfaz.
+- Internacionalización de la UI.
